@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
+    <link href="/normalize.css" rel="stylesheet">
+    <style>
+        header {
+            text-align: center;
+            background: url('tehranstreet.jpeg');
+            background-size: cover;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+
+        h1 {
+            font-size: 70px;
+            color: black;
+        }
+
+        img {
+            margin: 40px 0px 0px 0px;
+            border: 7px solid white;
+            border-radius: 20px;
+        }
+
+        ul {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        li {
+            display: inline;
+            padding: 0px 10px 0px 10px;
+        }
+
+        article {
+            font-family: 'Lalezar', cursive;
+            max-width: 500px;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: right;
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 36px;
+                padding: 5px;
+            }
+
+            li {
+                padding: 5px;
+                display: block;
+            }
+        }
+
+        img {
+            border: 4px solid white;
+            height: 130px;
+            width: 130px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="poorya.jpeg">
+        <h1>PouRya's Blog</h1>
+        <ul>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Best Poems</a></li>
+            <li><a href="#">Worst Poems</a></li>
+        </ul>
+    </header>
+    <article>
+        <h2>قیصر امین پور</h2>
+        <pre>
+        من از عهد آدم تو را دوست دارم 
+
+از آغـــاز عالــم تو را دوست دارم
+
+چه شب ها من و آسمان تا دم صبح
+
+سرودیم نم نم ؛ تـــــو را دوست دارم
+
+نه خطی ، نه خالی ! نه خواب و خیالی !
+
+من ای حس مبهــــم تــــو را دوست دارم
+
+سلامی صمیمی تر از غـم ندیدم
+
+به اندازه ی غم تو را دوست دارم
+
+بیــــا تا صدا از دل سنگ خیــــزد
+
+بگوییم با هم : تو را دوست دارم
+
+جهان یک دهان شد همـــآواز با ما :
+
+تو را دوست دارم ، تو را دوست دارم
+    </pre>
+        <button>Like</button>
+    </article>
+    <article>
+        <h2>سهراب سپهری</h2>
+        <pre>
+        برخيزيم ، و دعا كنيم:
+لب ما شيار عطر خاموشي باد!
+نزديك ما شب بي دردي است ، دوري كنيم.
+كنار ما ريشه بي شوري است، بر كنيم.
+و نلرزيم ، پا در لجن نهيم ، مرداب را به تپش در آييم.
+آتش را بشويم، ني زار همهمه را خاكستر كنيم.
+قطره را بشويم، دريا را در نوسان آييم.
+و اين نسيم ، بوزيم ، و جاودان بوزيم.
+و اين خزنده ، خم شويم ، و بينا خم شويم.
+و اين گودال ، فرود آييم ، و بي پروا فرود آييم.
+برخورد خيمه زنيم ، سايبان آرامش ما ، ماييم.
+    </pre>
+        <button>Like</button>
+    </article>
+    <script>
+        $("button").on("click", function () {
+            alert("Clicked!");
+        });
+    </script>
+</body>

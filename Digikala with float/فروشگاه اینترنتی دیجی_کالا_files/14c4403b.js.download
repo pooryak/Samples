@@ -1,0 +1,260 @@
+/*[PATH @digikala/supernova-digikala-desktop/assets/local/js/clickStream.js]*/
+clickStream = {
+    waiterForDomComplete: 0,
+    time: 0,
+
+    init: function () {
+        this.initSnowplow();
+    },
+
+    /**
+     * install snowplow
+     */
+    initSnowplow: function () {
+        var snowplowCollector = clickStreamSetting.collector;
+
+        (function (p, l, o, w, i, n, g) {
+            if (!p[i]) {
+                p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+                p.GlobalSnowplowNamespace.push(i);
+                p[i] = function () {
+                    (p[i].q = p[i].q || []).push(arguments)
+                };
+                p[i].q = p[i].q || [];
+                n = l.createElement(o);
+                g = l.getElementsByTagName(o)[0];
+                n.async = 1;
+                n.src = w;
+                g.parentNode.insertBefore(n, g)
+            }
+        }(window, document, "script", "https://d1fc8wv8zag5ca.cloudfront.net/2.9.0/sp.js", "snowplow"));
+
+        snowplow("newTracker", "cf", snowplowCollector, {
+            appId: clickStreamSetting.appId,
+            platform: "web",
+            cookieDomain: ".digikala.com",
+            cookieName: "sp",
+            encodeBase64: true,
+            post: true,
+            respectDoNotTrack: false,
+            sessionCookieTimeout: 3600,
+            pageUnloadTimer: 500,
+            forceUnsecureTracker: false,
+            forceSecureTracker: true,
+            stateStorageStrategy: "localStorage",
+            userFingerprint: true,
+            contexts: {
+                webPage: true,
+                performanceTiming: false,
+                gaCookies: true,
+                geolocation: false
+            }
+        });
+
+        window.snowplow('setUserId', userId);
+
+        // page view
+        window.snowplow('trackPageView');
+
+        // window.snowplow('enableErrorTracking');
+    },
+
+    /**
+     * TimeTracker : call in footer
+     */
+    initTimeTracker: function () {
+        var $this = this;
+
+        $this.time = window.performance.timing;
+        if (typeof $this.time.domComplete !== "undefined" || $this.time.domComplete != 0 || $this.waiterForDomComplete > 6) {
+            window.snowplow('trackUnstructEvent', {
+                schema: 'iglu:com.digikala.research/digikalaTimePerformance/jsonschema/1-0-1',
+                data: {
+                    connectStart: $this.time.connectStart,
+                    connectEnd: $this.time.connectEnd,
+                    domComplete: $this.time.domComplete,
+                    domContentLoadedEventEnd: $this.time.domContentLoadedEventEnd,
+                    domContentLoadedEventStart: $this.time.domContentLoadedEventStart,
+                    domInteractive: $this.time.domInteractive,
+                    domLoading: $this.time.domLoading,
+                    domainLookupEnd: $this.time.domainLookupEnd,
+                    domainLookupStart: $this.time.domainLookupStart,
+                    fetchStart: $this.time.fetchStart,
+                    loadEventEnd: $this.time.loadEventEnd,
+                    loadEventStart: $this.time.loadEventStart,
+                    navigationStart: $this.time.navigationStart,
+                    redirectEnd: $this.time.redirectEnd,
+                    redirectStart: $this.time.redirectStart,
+                    requestStart: $this.time.requestStart,
+                    responseEnd: $this.time.responseEnd,
+                    responseStart: $this.time.responseStart,
+                    secureConnectionStart: $this.time.secureConnectionStart,
+                    unloadEventEnd: $this.time.unloadEventEnd,
+                    unloadEventStart: $this.time.unloadEventStart
+                }
+            });
+        } else {
+            $this.waiterForDomComplete = $this.waiterForDomComplete + 1;
+            setTimeout($this.initTimeTracker, 500);
+        }
+    },
+
+    /**
+     * call in search ajax success
+     */
+    searchResult: function searchResult() {
+        var searchFilters = this.getUrlParams();
+
+        window.snowplow('trackUnstructEvent', {
+            schema: 'iglu:com.digikala.research/digikalaSearch/jsonschema/1-0-0',
+            data: {
+                clickedProductColumn: null,
+                clickedProductId: null,
+                clickedProductIndex: null,
+                clickedProductRow: null,
+                pageNumber: searchFilters.pageno || 1,
+                pageSize: Object.keys(productIds).length,
+                totalResult: pager.total_rows,
+                term: searchFilters.q ? decodeURI(searchFilters.q).split(' ') : [],
+                resultArray: productIds,
+                query: searchFilters
+            }
+        });
+    },
+
+    /**
+     * call in search item click
+     */
+    searchItemClick: function (data) {
+        var searchFilters = this.getUrlParams();
+
+        window.snowplow('trackUnstructEvent', {
+            schema: 'iglu:com.digikala.research/digikalaSearchItemClick/jsonschema/1-0-0',
+            data: {
+                clickedProductId: data.productId,
+                clickedProductIndex: data.productIndex,
+                clickedProductRow: data.productRow,
+                clickedProductColumn: data.productColumn,
+                pageNumber: searchFilters.pageno || 1,
+                pageSize: Object.keys(productIds).length,
+                totalResult: pager.total_rows,
+                term: searchFilters.q ? decodeURI(searchFilters.q).split(' ') : [],
+                resultArray: productIds,
+                query: searchFilters
+            }
+        });
+    },
+
+    getUrlParams: function () {
+        var setValue = function (root, path, value) {
+            if (path.length > 1) {
+                var dir = path.shift();
+                if (typeof root[dir] === 'undefined') {
+                    root[dir] = path[0] === '' || parseInt(path[0]) >= 0 ? [] : {};
+                }
+
+                arguments.callee(root[dir], path, value);
+            } else {
+                if (root instanceof Array) {
+                    root.push(value);
+                } else {
+                    root[path] = value;
+                }
+            }
+        };
+        var nvp = location.search.substr(1).split('&');
+        var data = {};
+        for (var i = 0; i < nvp.length; i++) {
+            var pair = nvp[i].split('=');
+            var name = decodeURIComponent(pair[0]);
+            var value = decodeURIComponent(pair[1]);
+
+            var path = name.match(/(^[^\[]+)(\[.*\]$)?/);
+            if (!path) {
+                continue;
+            }
+            var first = path[1];
+            if (path[2]) {
+                //case of 'array[level1]' || 'array[level1][level2]'
+                path = path[2].match(/(?=\[(.*)\]$)/)[1].split('][')
+            } else {
+                //case of 'name'
+                path = [];
+            }
+            path.unshift(first);
+
+            setValue(data, path, value);
+        }
+
+        var path = window.location.pathname;
+        var lowerPath = path.toLowerCase();
+        var category = lowerPath.lastIndexOf('category') > 0 ? path.substr(path.lastIndexOf('category') + 9).replace(/-/g, ' ') : null;
+        var brandCode = lowerPath.lastIndexOf('brand/') > 0 ? path.substr(path.lastIndexOf('brand/') + 6).replace(/-/g, ' ') : null;
+        var sellerCode = lowerPath.lastIndexOf('seller/') > 0 ? path.substr(path.lastIndexOf('seller/') + 7).replace(/-/g, ' ') : null;
+        if (category) {
+            data['category'] = category.replace(/^\/|\/$/g, ''); // tim slash
+        }
+        if (brandCode) {
+            data['brandCode'] = brandCode.replace(/^\/|\/$/g, ''); // tim slash;
+        }
+        if (sellerCode) {
+            data['sellerCode'] = sellerCode.replace(/^\/|\/$/g, ''); // tim slash;
+        }
+
+        if (!!data['has_selling_stock']) {
+            delete data['has_selling_stock'];
+            data['status'] = '2'; // has_selling_stock=1
+        }
+
+        if (data['pageno']) {
+            data['pageno'] = parseInt(data['pageno']);
+        }
+
+        return data;
+    },
+
+    convertToString: function (item) {
+        if (!!item) {
+            item.adsPlacementType = '' + item.adsPlacementType;
+            item.adsPlacementId = '' + item.adsPlacementId;
+            item.cmp = '' + item.cmp;
+            item.landing = '' + item.landing;
+            item.bannerId = '' + item.bannerId;
+        }
+        return item;
+    },
+
+    bannerClickTracker: function (clickedBanner) {
+        if (!!clickedBanner) {
+            clickedBanner = this.convertToString(clickedBanner);
+        }
+        window.snowplow('trackUnstructEvent', {
+            schema: 'iglu:com.digikala.research/digikalaBannerClick/jsonschema/1-0-2',
+            data: {
+                clickedBanner: clickedBanner
+            }
+        });
+    },
+
+    bannerImpressionTracker: function (impressedBanners) {
+        if (!impressedBanners) return;
+        for (var i = 0; i < impressedBanners.length; ++i) {
+            impressedBanners[i] = this.convertToString(impressedBanners[i]);
+        }
+        window.snowplow('trackUnstructEvent', {
+            schema: 'iglu:com.digikala.research/digikalaBannerImpression/jsonschema/1-0-2',
+            data: {
+                arrayOfImpressedBanners: impressedBanners
+            }
+        });
+    },
+
+    sendPDPCS: function (data) {
+        window.snowplow('trackUnstructEvent', {
+            schema: 'iglu:com.digikala.research/digikalaProduct/jsonschema/1-0-2',
+            data: data
+        });
+    }
+};
+
+clickStream.init();

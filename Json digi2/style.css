@@ -1,0 +1,997 @@
+.ShowMore {
+    display: none;
+}
+
+@keyframes anim1 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: 'iransan';
+    src: url('fonts/eot/IRANSansWeb.eot');
+    /* IE9 Compat Modes */
+    src: url('fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/woff2/IRANSansWeb.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/woff/IRANSansWeb.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('fonts/ttf/IRANSansWeb.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('IRANSansWeb.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+@font-face{
+    font-family: 'icon';
+    src: url('fonts/ICON FONT VOL. 1 PART 1/fonts/Glyphter.eot');
+    /* IE9 Compat Modes */
+    src: url('fonts/ICON FONT VOL. 1 PART 1/fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
+        /* Super Modern Browsers */
+        url('fonts/ICON FONT VOL. 1 PART 1/fonts/Glyphter.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('fonts/ICON FONT VOL. 1 PART 1/fonts/Glyphter.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('Glyphter.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+body {
+    font-family: iransan ;
+}
+a:visited {
+    color: white;
+}
+a:active{
+    color: white;
+}
+a:link {
+    color: white;
+}
+a:hover {
+    color: white;
+}
+.head-offer {
+    overflow: hidden;
+    height: 76px;
+    width: 100%;
+    background-color: #da0430;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.head-offer .mande {
+    z-index: 100;
+    top: 15%;
+    left: 40%;
+    right: 40%;
+    position: absolute;
+    animation: anim1 4s infinite;
+}
+
+
+.head-offer img {
+    width: 89%;
+    height: 100%;
+    max-width: 100%;
+}
+
+.FirstMenu {
+    width: 95%;
+    margin: 0 auto;
+
+
+}
+
+.FirstMenu .RightOnes {
+    padding-top: 2%;
+    width: 60%;
+    float: right;
+    height: 75px;
+}
+
+.FirstMenu .RightOnes img {
+    float: right;
+    margin-right: 20px;
+    width: 20%;
+    min-width: 100px;
+}
+
+.FirstMenu .RightOnes form {
+    width: 70%;
+    margin-left: 14%;
+}
+
+.FirstMenu .RightOnes .SearchBox {
+    padding-right: 2%;
+    font-family: 'iransan' ;
+    margin-right: 7%;
+    /* float: right; */
+    height: 39px;
+    background-color: #eceff1;
+    border-radius: 0 3px 3px 0;
+    border: 1px solid #d5dadd;
+    border-left: none;
+    direction: rtl;
+    width: 60%;
+
+}
+
+.FirstMenu .RightOnes .submit {
+    float: left;
+    background-color: #ef5661;
+    border-radius: 3px 0 0 3px;
+    background-image: url("magnif.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: 10px;
+    margin: 0 auto;
+    width: 60px;
+    height: 40px;
+    border: none;
+}
+
+.FirstMenu .LeftOnes {
+    padding-top: 2%;
+    width: 40%;
+    float: left;
+    height: 75px;
+}
+
+.FirstMenu .LeftOnes .idbuy {
+    float: left;
+    width: 153px;
+    height: 38px;
+    border: 1px solid #00bfd6;
+    border-radius: 3px;
+}
+
+.FirstMenu .LeftOnes .idbuy img {
+    float: right;
+    margin-top: 4%;
+    margin-right: 5%;
+}
+
+.FirstMenu .LeftOnes .idbuy .TypeKharid {
+    float: right;
+    margin-right: 10%;
+    margin-top: 3%;
+    font-size: 18px;
+    color: #00bfd6;
+}
+
+.FirstMenu .LeftOnes .circle {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 1px solid #00bfd6;
+    background-color: #00bfd6;
+    margin-top: 5%;
+    margin-left: 2%;
+    bottom: 20%;
+    line-height: 0px;
+    font-size: 10px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.FirstMenu .LeftOnes .circle #adad {
+    text-align: center;
+    margin-top: 44%;
+    color: white;
+}
+
+.FirstMenu .LeftOnes .border {
+    float: left;
+    height: 38px;
+    width: 2px;
+    background-color: #606060;
+    margin-left: 3%;
+    margin-top: .5%;
+}
+.down {
+    border: solid  #535353;;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.FirstMenu .LeftOnes .TypeVorood {
+    float: left;
+    margin-left: 20%;
+    margin-top: -5%;
+    color: #535353;
+}
+.Menu {
+
+    float: right;
+    width: 100%;
+    height: 40px;
+    background-color: #616161;
+    border-bottom-color: #000;
+    clear: both;
+    float: none;
+
+
+}
+li {
+    margin-top: 0.5%;
+    font-size: 12px;
+    float: right;
+    padding-right: 4%;
+    color: white;
+    text-decoration: none;
+    height: 36px;
+}
+.FirstMnu {
+    position: relative;
+}
+.UnderMenu {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    clear: both;
+    float: none;
+    position: absolute;
+}
+.Menu .FirstMnu .NewMenu {
+    border-radius: 0 0 5px 5px;
+    top: 35px;
+    right: 46px;
+    display: none;
+    height: 370px;
+    line-height: 0;
+    background-color: #fff;
+    width: 90vw;
+    border: 1px solid #888888;
+    z-index: 100;
+}
+.Menu .FirstMnu .NewMenu li a {
+    color: #535353;
+    padding: 0;
+}
+.Menu .FirstMnu li:hover .NewMenu {
+    display: block;
+    position: absolute;
+    top: 42px;
+    z-index: 200;
+}
+.Menu .FirstMnu .NewMenu .BazShow li {
+    position: relative;
+    clear: right;
+    margin: -3.5%;
+    margin-right: 2%;
+    color: #535353;
+}
+#li1 {
+    position: relative;
+    clear: right;
+    padding-top: 3%;
+    margin-right: -1%;
+    color: #535353;
+}
+#li12 {
+    position: relative;
+    clear: right;
+    float: right;
+    color: #535353;
+    padding-top: 10%;
+    margin-right: 0;
+}
+#li4{
+    position: relative;
+    clear: right;
+    padding-top: 3%;
+    margin-right: -1%;
+    color: #14bd3e;
+}
+.Menu .FirstMnu .NewMenu .BazShow {
+    width: 16%;
+    padding-top: 1%;
+    float: right;
+    color: #535353;
+}
+.Menu .FirstMnu .NewMenu .BazShow li:first-child {
+    margin-top: 5%;
+}
+.Menu.FirstMnu .NewMenu .MenuImg img {
+    position: absolute;
+    top: 20%;
+    margin-top: 5%;
+}
+.Menu .FirstMnu .NewMenu .BottomBorder {
+    position: absolute;
+    right: 3%;
+    bottom: 7%;
+    height: 2px;
+    width: 30%;
+    margin-bottom: 0;
+    background-color: #e9e9e9;
+}
+.Menu .FirstMnu .NewMenu .BazShow2 {
+    width: 16%;
+    padding-top: 1%;
+    padding-right: 3%;
+    float: right;
+}
+.Menu .FirstMnu .NewMenu .BazShow2 li {
+    clear: right;
+    margin: -3.5%;
+}
+.Menu .FirstMnu .NewMenu .BazShow2 li:first-child {
+    margin-top: 5%;
+}
+.Menu .FirstMnu .NewMenu .BazShow3 {
+    width: 28%;
+    padding-top: 1%;
+    padding-right: 3%;
+    float: right;
+    margin-right: 1%;
+}
+.Menu .FirstMnu .NewMenu .BazShow3 li {
+    line-height: 20px;
+    clear: right;
+    margin: -4.75%;
+}
+.Menu .FirstMnu .NewMenu .BazShow3 li:first-child {
+    margin-top: 5%;
+}
+.Menu .FirstMnu .NewMenu .BazShow4 {
+    padding-top: 1%;
+    float: right;
+    margin-right: 3%;
+}
+.Menu .FirstMnu .NewMenu .BazShow4 li {
+    clear: right;
+    margin: -4.75%;
+}
+.Menu .FirstMnu .NewMenu .BazShow4 li:first-child {
+    margin-top: 5%;
+}
+.main {
+    position: relative;
+    margin-top: 5px;
+    clear: both;
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+display: flex;
+}
+.ShadowMain {
+    
+    width: 100%;
+    height: 90vw;
+   display: none;
+}
+.ShadowMain1{
+    position: absolute;
+    display: block;
+    background-color: #000000;
+    opacity: .5;
+    z-index: 99;
+}
+.main1 {
+    opacity: .2;
+    background-color: #111;
+}
+.btn {
+    display:none;
+}
+a:visited {
+    color: white;
+}
+.main .LeftMain {
+    flex:2;
+    flex-basis:1000px; 
+    order: 1;
+}
+.main .RightMain {
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    order: 3;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-top: 18px;
+    flex-basis: 240px;
+}
+.main .RightMain .Category {
+    height: 310px;
+    border: 1px solid #dedede;
+    color: #535353;
+}
+.main .RightMain .Category .HeaderOne {
+    padding-right: 20px;
+    text-align: right;
+    border-bottom: 1px solid #dedede;
+}
+.main .RightMain .Category .KalaD {
+    padding-right: 15px;
+    text-align: right;
+    padding-top: 5%;
+}
+.main .RightMain .Category .Lavazem {
+    text-align: right;
+    padding-right: 35px;
+    padding-top: 5%;
+}
+.main .RightMain .Category .Cover {
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 5%;
+}
+.main .RightMain .Category .Protect {
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 5%;
+}
+.main .RightMain .Category .Hands {
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 5%;
+}
+.main .RightMain .Category .Paye {
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 5%;
+}
+.main .RightMain .Category .Cable {
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 5%;
+}
+.main .RightMain .Category .All {
+    text-align: right;
+    padding-right: 50px;
+    border-top: 1px solid #dedede;
+}
+.main .RightMain .SearchSide {
+    height: 100px;
+    border: 1px solid #dedede;
+    margin-top: 3%;
+}
+.main .RightMain .SearchSide .TextSearch {
+font-size: 16px;
+font-weight: 600;
+padding-top: 4px;
+text-align: center;
+padding-bottom: 3%;
+border-bottom: 1px solid #dedede;
+}
+.main .RightMain .SearchSide .SearchText {
+    display: flex;
+    margin: auto;
+    margin-left: 0%;
+    padding-bottom: 2%;
+border-bottom: 1px solid #dedede;
+}
+.main .RightMain .SearchSide .SearchText input {
+    font-family: iransan;
+    height: 30px;
+    font-size: 20px;
+    color: #555555;
+    padding-left: 3%;
+    width: 100%;
+    margin: auto;
+    display: block;
+   text-align: center;
+    margin-top: 5%;
+    border:transparent;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    background-image: url("Search.png") ;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+   direction: rtl;
+    background-image: url("Search.png") ;
+    font-weight: 400;
+    
+font-size: 12px;
+}
+.main .RightMain .Brand {
+    margin-top: 5%;
+    height: 435px;
+    border: 1px solid #dedede;
+}
+.main .RightMain .Brand .Naming {
+    height: 97px;
+}
+
+.main .RightMain .Brand .Naming .SNaming {
+    float: right;
+    text-align: right;
+    height: 435px;
+    margin-right: 1%;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.RightMain .Brand .Naming .arrow {
+    margin-left: 5%;
+    font-weight: 700;
+text-align: left;
+padding-bottom: 3%;
+border-bottom: 1px solid #dedede;
+}
+.main .RightMain .Brand .Naming .SearchText1{
+    display: flex;
+    margin: auto;
+    margin-left: 16%;
+    padding-bottom: 10%;
+border-bottom: 1px solid #dedede;
+
+}
+.main .RightMain .Brand .Naming .SearchText1 input {
+    font-size: 20px;
+    color: #555555;
+    padding-left: 3%;
+    width: 100%;
+    margin: auto;
+    display: block;
+   text-align: center;
+    margin-top: 5%;
+    border:1px solid #00bfd6;
+    border-radius: 5px;
+    background-color: transparent;
+    background-image: url("Search.png") ;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+   direction: rtl;
+    
+}
+.main .RightMain .Brand .SearchCon {
+    direction: rtl;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 300px;
+    height: 310px;
+    overflow-y: scroll;
+}
+.main .RightMain .Brand .SearchCon ul {
+    margin:auto;
+    margin-top: 8%;
+    height: 310px;
+display: block;
+    color: #000;
+}
+.main .RightMain .Brand .SearchCon ul li {
+    color: #000;
+   align-self: stretch;
+    display: block;
+    flex-grow: 1;
+
+}
+.main .RightMain .Brand .SearchCon input {
+    display: inline;  
+    }
+.main .RightMain .Brand .SearchCon .Label {
+        border: 1px solid #000000;
+        display: inline;  
+}
+.main .RightMain .stock {
+   
+    height: 50px;
+    border: 1px solid #dedede;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+  
+}
+.main .RightMain .stock .Type {
+    margin:auto;
+    padding: 0;
+    text-align: center;
+    display: inline;
+}
+.main .RightMain .stock .Range {
+    
+    margin:auto;
+    display: inline;
+    width: 40px;
+    margin-bottom: 2px;
+}
+.main .RightMain .stock .Range1 {
+    
+    display: inline;
+    
+   
+}
+input[type=range] {
+    height: 31px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #E5E5E5;
+    border-radius: 50px;
+    border: 1px solid #8C8C8C;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 1px #8C8C8C;
+    border: 1px solid #8C8C8C;
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: 2px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #E5E5E5;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #E5E5E5;
+    border-radius: 50px;
+    border: 1px solid #8C8C8C;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 1px #8C8C8C;
+    border: 1px solid #8C8C8C;
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #E5E5E5;
+    border: 1px solid #8C8C8C;
+    border-radius: 100px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #E5E5E5;
+    border: 1px solid #8C8C8C;
+    border-radius: 100px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 1px #8C8C8C;
+    border: 1px solid #8C8C8C;
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #E5E5E5;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #E5E5E5;
+  }
+  .main .LeftMain {
+      padding-top: 18px;
+  }
+  .main .LeftMain .kala {
+      margin-left: 30px;
+      font-family: iransan;
+      color: #b7b7b7;
+      font-size: 12px;
+    padding-top: 18px;
+    height: 20px;
+    font-weight: 400;
+    line-height: 21px;
+}
+  .main .LeftMain .FirstItem .Li {
+      margin: 0;    
+      padding-right: 1%;
+  }
+.main .LeftMain .FirstItem li a {
+    display: inline;
+    color: #000000;
+}
+.main .LeftMain .FirstItem li::before {
+    content: "/";
+    color: #cfcfcf;
+}
+.main .LeftMain .MainKala {
+    display: flex;
+    flex-direction: column;
+   margin: auto auto;
+    height: auto;
+    width: 95%;
+    background-color: #ffffff;
+}
+.main .LeftMain .Sort::before{
+    font-family: icon;
+    font-size: 35px;
+    content: "D";
+    color: #515151;
+    text-align: right;
+}
+.main .LeftMain .Sort a {
+    margin-right: auto;
+color: #000000;
+}
+.main .LeftMain .Sort  {
+    align-self: stretch;
+    
+    direction: rtl;
+    text-align: right;
+   
+color: #000000;
+
+flex-grow: 5;
+
+}
+.main .RightMain .Ready {
+    border: 1px solid #dedede;
+    
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+}
+.main .RightMain .Ready .Range {
+    width: 40px;
+    margin:auto;
+    display: inline;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2px;
+}
+.main .RightMain .Ready .Type {
+    margin:auto;
+    padding: 0;
+    text-align: center;
+    display: inline;
+}
+.Category , .SearchSide , .Brand , .SearchCon , .stock , .Ready {
+    background-color: #FFFFFF;
+}
+.main .LeftMain .Sort a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 25px;
+    padding-bottom: 3px;
+ justify-content: center;
+    margin-right: 2%;
+}
+.main .LeftMain .Sort a:hover {
+    background-color: #ece9e9;
+    border-radius: 5px;
+    
+}
+.main .LeftMain .Sort::before {
+    content: "D مرتب سازی بر اساس:";
+    font-size:18px;
+}
+.main .LeftMain .SortView ul {
+    margin-top: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+   
+    
+}
+.main .LeftMain .SortView li{
+    flex: 1 0 20%;
+    height: auto;
+    border: 1px solid #ebe9e9;
+    padding-right: 0;
+}
+.main .LeftMain .SortView li div {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: #535353;
+}
+.main .LeftMain .MainKala .SortView ul li .Produc1 img {
+    margin-top: 30px;
+text-align: center;
+margin-right: auto;
+margin-left: auto;
+}
+.main .LeftMain .MainKala .SortView ul li .Produc1 a {
+    color: #535353;
+    text-align: right;
+    padding-top: 3%;
+    margin-right: auto;
+}
+.main .LeftMain .MainKala .SortView ul li .Produc1 .Price {
+    border-bottom: 1px solid #f5f5f5;
+    margin-bottom: 3%;
+}
+.main .LeftMain .MainKala .SortView ul li .Produc1 .star{
+    align-self: baseline;
+    width: 100%;
+    text-align: right;
+  margin-right: 0;
+}
+.main .LeftMain .MainKala .SortView ul li .Produc1 .star::after {
+    font-family: "Font Awesome 5 Free"; font-weight: 100; content: "\f005";
+    text-align: right;
+    padding-left: 0;
+
+}
+.main .LeftMain .MainKala .SortView ul li .HoverPro:hover  {
+    box-shadow: 0 5px 5px 0 #000;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+@media only screen and (max-width: 850px) {
+    
+    .btn{
+        display: block;
+    }
+    .UnderMenu {
+        display: none;
+    }
+
+    .Menu {
+        display: none;
+    }
+
+    .FirstMenu {
+        width: 100%;
+        height: 80%;
+    }
+
+    .FirstMenu .RightOnes {
+        height: 150px;
+        float: none;
+        width: 100%;
+    }
+
+    .FirstMenu .LeftOnes {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .FirstMenu .RightOnes img {
+        float: right;
+        text-align: left;
+        width: 0%;
+        margin-right: 2%;
+        position: relative;
+    }
+
+    .FirstMenu .RightOnes form {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .FirstMenu .RightOnes .SearchBox {
+        width: 60%;
+        float: right;
+        
+        text-align: center;
+        margin-right: 9%;
+        margin-top: 11%;
+        margin-left: -5%;
+        position: absolute;
+
+    }
+
+    .FirstMenu .RightOnes .submit {
+        float: right;
+        margin-top: 11%;
+        margin-left: -14%;
+        position: absolute;
+    }
+
+    .FirstMenu .LeftOnes .idbuy {
+        width: 40%;
+
+        margin: 0 auto;
+        float: right;
+        text-align: center;
+
+    }
+
+    .FirstMenu .LeftOnes .idbuy img {
+        float: right;
+    }
+
+    .FirstMenu .LeftOnes .idbuy {
+        float: right;
+    }
+
+    .FirstMenu .LeftOnes .border {
+        text-align: center;
+        display: none;
+    }
+
+    .FirstMenu .LeftOnes .idbuy .TypeKharid {
+        font-size: 100%;
+        float: right;
+        text-align: center;
+        margin-right: 7%
+    }
+
+    .FirstMenu .LeftOnes .idbuy .circle {
+        size: 50%;
+        float: none;
+        margin-right: 60%;
+        margin-top: 3%;
+    }
+
+    .FirstMenu .LeftOnes .TypeVorood {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        color: #535353;
+    }
+
+    .down {
+        display: none;
+        
+    }
+
+    .UnderMenu {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        z-index: 2;
+        background-color: #000;
+    }
+
+    .btn {
+        float: right;
+        background-color: #ef5661;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .ShowMore {
+    float: right;
+        display: block;
+        float: right;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+}

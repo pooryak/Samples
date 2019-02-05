@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="resetcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="head-offer">
+        <img src="digikala.jpeg">
+        <div class="mande"><img src="mande.png"></div>
+    </div>
+    <div class="FirstMenu">
+        <div class="RightOnes">
+                <button class="btn"> <i class="fa fa-bars"></i></button>
+            <img src="digikala.svg" width="135px" height="38px">
+           
+            <form>
+                <input type="text" placeholder="اینجا بنویس ..." class="SearchBox">
+                <input type="button" class="submit" onclick="counter()">
+            </form>
+        </div>
+        <div class="LeftOnes">
+            <div class="idbuy">
+                <img src="basket.png" width="23px" height="23px">
+                <span class="TypeKharid">سبد خرید</span>
+                <div class="circle">
+                    <div id="adad">0</div>
+                </div>
+            </div>
+            <div class="border"></div>
+            <p><i class="down"></i></p>
+            <span class="TypeVorood">ورود / ثبت نام</span>
+
+        </div>
+    </div>
+    <div class="Menu">
+        <ul class="FirstMnu" id="first">
+            <li><a href='#'>کالای دیجیتال</a>
+                <div class="NewMenu">
+                    <ul class="BazShow">
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">لوازم جانبی گوشی&#60;</a></li>
+                        <li><a href="#">کیف و کاور گوشی</a></li>
+                        <li><a href="#">پاوربانک (شارژر همراه(</a></li>
+                        <li><a href="#">هندزفری ،هدست ،هدفون</a></li>
+                        <li><a href="#">پایه نگهدارنده گوشی</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">گوشی موبایل&#60;</a></li>
+                        <li><a href="#">آیفون اپل</a></li>
+                        <li><a href="#">هوآوی</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">واقعیت مجازی&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">مچ بند و ساعت هوشمند&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">هدفون ، هندزفری ، هدست&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">اسپیکر بلوتوث و با سیم&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">اسکوتر برقی&#60;</a></li>
+                        <div class="BottomBorder"></div>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc;margin-right: -3%;">همه دسته بندی های
+                                کالای دیجیتال&#43;</a></li>
+                    </ul>
+                    <ul class="BazShow2">
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">هارد،فلش،SSD</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">دوربین</a></li>
+                        <li><a href="#">دوربین عکاسی دیجیتال</a></li>
+                        <li><a href="#">دوربین ورزشی و فیلم برداری</a></li>
+                        <li><a href="#">دوربین چاپ سریع</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">لوازم جانبی دوربین</a></li>
+                        <li><a href="#">لنز</a></li>
+                        <li><a href="#">کیف</a></li>
+                        <li><a href="#">کارت حافظه</a></li>
+                        <li><a href="#">کاغذ چاپ عکس</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">دوربین تحت شبکه&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">دوربین دوچشمی و شکاری&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">تلسکوپ&#60;</a></li>
+                    </ul>
+                    <ul class="BazShow3">
+                        <li class="NewColor"><a href="#" style="color:#50b7cc"> و بازیPS4،XBOX&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">لپ تاپ&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">لوازم جانبی لپ تاپ&#60;</a></li>
+                        <li><a href="#">کیف کوله و کاور</a></li>
+                        <li><a href="#">کابل های رابط و مبدل</a></li>
+                        <li><a href="#"> HDMIو AUXکابل صدا </a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">مودم و تجهیزات شبکه&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">کامپیوتر و تجهیزات جانبی&#60;</a></li>
+                        <li><a href="#">تجهیزات مخصوص بازی</a></li>
+                        <li><a href="#">مانیتور</a></li>
+                        <li><a href="#">کیس های اسمبل شده</a></li>
+                        <li><a href="#">قطعات داخلی کامپیوتر</a></li>
+                        <li><a href="#">ماوس</a></li>
+                    </ul>
+                    <ul class="BazShow4">
+                        <li class="NewColor"><a href="#" style="color:#50b7cc"> تبلت&#60;</a></li>
+                        <li><a href="#">لنوو</a></li>
+                        <li><a href="#">سامسونگ</a></li>
+                        <li><a href="#">ایسوس</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">کیف ، کاور ،لوازم جانبی تبلت&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">ماشین های اداری&#60;</a></li>
+                        <li><a href="#">لوازم جانبی پرینتر</a></li>
+                        <li><a href="#">تلفن ، بی سیم و سانترال</a></li>
+                        <li><a href="#">فکس</a></li>
+                        <li><a href="#">پرینتر</a></li>
+                        <li><a href="#">لیبل زن و لوازم جانبی</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">کتابخوان فیدیبوک&#60;</a></li>
+                        <li class="NewColor"><a href="#" style="color:#50b7cc">کارت هدیه خرید از دیجی کالا&#60;</a></li>
+                    </ul>
+                    <img class="MenuImg" src="1636.png">
+                </div>
+            </li>
+            <li><a href='#'>آرایشی،بهداشتی و سلامت</a>
+                <div class="NewMenu"></div>
+            </li>
+            <li><a href='#'>خودرو ابزار اداری</a>
+                <div class="NewMenu"></div>
+            </li>
+            <li><a href='#'>مد و پوشاک</a>
+                <div class="NewMenu"></div>
+            </li>
+            <li><a href='#'>خانه و آشپزخانه</a>
+                <div class="NewMenu"></div>
+            </li>
+            <li><a href='#'>کتاب لواز تحریر</a>
+                <div class="NewMenu"></div>
+            </li>
+            <li><a href='#'>اسباب بازی کودک نوزاد</a>
+                <div class="NewMenu"></div>
+            </li>
+            <li><a href='#'>ورزش سفر </a>
+                <div class="NewMenu"></div>
+            </li>
+            <li><a href='#'>سوپر مارکت</a>
+                <div class="NewMenu"></div>
+            </li>
+            <li> <a href='#'>فروش ویژه</a>
+                <div class="NewMenu"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="UnderMenu">
+        <div class="sss"></div>
+    </div>
+    <div class="main" id="main">
+
+    </div>
+
+
+    <style>
+        .ShowMore {
+            display: none;
+        }
+
+        @keyframes anim1 {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @font-face {
+            font-family: 'iransan';
+            src: url('fonts/eot/IRANSansWeb.eot');
+            /* IE9 Compat Modes */
+            src: url('fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+                /* IE6-IE8 */
+                url('fonts/woff2/IRANSansWeb.woff2') format('woff2'),
+                /* Super Modern Browsers */
+                url('fonts/woff/IRANSansWeb.woff') format('woff'),
+                /* Pretty Modern Browsers */
+                url('fonts/ttf/IRANSansWeb.ttf') format('truetype'),
+                /* Safari, Android, iOS */
+                url('IRANSansWeb.svg#svgFontName') format('svg');
+            /* Legacy iOS */
+        }
+
+        body {
+            font-family: iransan;
+        }
+
+        .head-offer {
+            overflow: hidden;
+            height: 76px;
+            width: 100%;
+            background-color: #da0430;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .head-offer .mande {
+            z-index: 100;
+            top: 15%;
+            left: 40%;
+            right: 40%;
+            position: absolute;
+            animation: anim1 4s infinite;
+        }
+
+
+        .head-offer img {
+            width: 89%;
+            height: 100%;
+            max-width: 100%;
+        }
+
+        .FirstMenu {
+            width: 95%;
+            margin: 0 auto;
+
+
+        }
+
+        .FirstMenu .RightOnes {
+            padding-top: 2%;
+            width: 60%;
+            float: right;
+            height: 75px;
+        }
+
+        .FirstMenu .RightOnes img {
+            float: right;
+            margin-right: 20px;
+            width: 20%;
+            min-width: 100px;
+        }
+
+        .FirstMenu .RightOnes form {
+            width: 70%;
+            margin-left: 14%;
+        }
+
+        .FirstMenu .RightOnes .SearchBox {
+            padding-right: 2%;
+            font-family: iransan;
+            margin-right: 7%;
+            /* float: right; */
+            height: 39px;
+            background-color: #eceff1;
+            border-radius: 0 3px 3px 0;
+            border: 1px solid #d5dadd;
+            border-left: none;
+            direction: rtl;
+            width: 60%;
+
+        }
+
+        .FirstMenu .RightOnes .submit {
+            float: left;
+            background-color: #ef5661;
+            border-radius: 3px 0 0 3px;
+            background-image: url("magnif.png");
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+            background-position-x: 20px;
+            background-position-y: 10px;
+            margin: 0 auto;
+            width: 60px;
+            height: 40px;
+            border: none;
+        }
+
+        .FirstMenu .LeftOnes {
+            padding-top: 2%;
+            width: 40%;
+            float: left;
+            height: 75px;
+        }
+
+        .FirstMenu .LeftOnes .idbuy {
+            float: left;
+            width: 153px;
+            height: 38px;
+            border: 1px solid #00bfd6;
+            border-radius: 3px;
+        }
+
+        .FirstMenu .LeftOnes .idbuy img {
+            float: right;
+            margin-top: 4%;
+            margin-right: 5%;
+        }
+
+        .FirstMenu .LeftOnes .idbuy .TypeKharid {
+            float: right;
+            margin-right: 10%;
+            margin-top: 3%;
+            font-size: 18px;
+            color: #00bfd6;
+        }
+
+        .FirstMenu .LeftOnes .circle {
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            border: 1px solid #00bfd6;
+            background-color: #00bfd6;
+            margin-top: 5%;
+            margin-left: 2%;
+            bottom: 20%;
+            line-height: 0px;
+            font-size: 10px;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+
+        .FirstMenu .LeftOnes .circle #adad {
+            text-align: center;
+            margin-top: 44%;
+            color: white;
+        }
+
+        .FirstMenu .LeftOnes .border {
+            float: left;
+            height: 38px;
+            width: 2px;
+            background-color: #606060;
+            margin-left: 3%;
+            margin-top: .5%;
+        }
+
+        .down {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            margin-left: 3%;
+            margin-top: 3%;
+        }
+
+        .FirstMenu .LeftOnes .TypeVorood {
+            float: left;
+            margin-left: 20%;
+            margin-top: -5%;
+        }
+
+        .Menu {
+
+            float: right;
+            width: 100%;
+            height: 40px;
+            background-color: #616161;
+            border-bottom-color: #000;
+            clear: both;
+            float: none;
+
+
+        }
+
+        li {
+            margin-top: 0.5%;
+            font-size: 12px;
+            float: right;
+            padding-right: 4%;
+            color: white;
+            text-decoration: none;
+            height: 36px;
+
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        .FirstMnu {
+            position: relative;
+        }
+
+        .UnderMenu {
+
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+            clear: both;
+            float: none;
+            position: absolute;
+        }
+
+        .Menu .FirstMnu .NewMenu {
+            border-radius: 0 0 5px 5px;
+            top: 35px;
+            right: 46px;
+            display: none;
+            height: 370px;
+            line-height: 0;
+            background-color: #fff;
+            width: 90vw;
+            border: 1px solid #888888;
+
+
+        }
+
+        .Menu .FirstMnu .NewMenu li a {
+            color: #000000;
+            padding: 0;
+        }
+
+        .Menu .FirstMnu li:hover .NewMenu {
+            display: block;
+            position: absolute;
+            top: 42px;
+            z-index: 200;
+
+        }
+
+
+        .Menu .FirstMnu .NewMenu .BazShow li {
+            position: relative;
+            clear: right;
+            margin: -3.5%;
+            margin-right: 2%;
+
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow {
+            padding-top: 1%;
+            float: right;
+
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow li:first-child {
+            margin-top: 5%;
+        }
+
+        .Menu.FirstMnu .NewMenu .MenuImg img {
+            position: absolute;
+            top: 20%;
+            margin-top: 5%;
+        }
+
+        .Menu .FirstMnu .NewMenu .BottomBorder {
+            position: absolute;
+            right: 3%;
+            bottom: 7%;
+            height: 2px;
+            width: 30%;
+            margin-bottom: 0;
+            background-color: #e9e9e9;
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow2 {
+            padding-top: 1%;
+            float: right;
+
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow2 li {
+            clear: right;
+            margin: -4.75%;
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow2 li:first-child {
+            margin-top: 5%;
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow3 {
+            padding-top: 1%;
+            float: right;
+            margin-right: 3%;
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow3 li {
+            clear: right;
+            margin: -4.75%;
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow3 li:first-child {
+            margin-top: 5%;
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow4 {
+            padding-top: 1%;
+            float: right;
+            margin-right: 3%;
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow4 li {
+            clear: right;
+            margin: -4.75%;
+        }
+
+        .Menu .FirstMnu .NewMenu .BazShow4 li:first-child {
+            margin-top: 5%;
+        }
+
+        .main {
+            clear: both;
+            width: 100%;
+            height: 80vh;
+            background-color: #fff;
+
+        }
+
+        .main1 {
+            opacity: .2;
+            background-color: #111;
+        }
+        .btn {
+            display:none;
+        }
+
+        @media only screen and (max-width: 850px) {
+            
+            .btn{
+                display: block;
+            }
+            .UnderMenu {
+                display: none;
+            }
+
+            .Menu {
+                display: none;
+            }
+
+            .FirstMenu {
+                width: 100%;
+                height: 80%;
+            }
+
+            .FirstMenu .RightOnes {
+                height: 150px;
+                float: none;
+                width: 100%;
+            }
+
+            .FirstMenu .LeftOnes {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            .FirstMenu .RightOnes img {
+                float: right;
+                text-align: left;
+                width: 0%;
+                margin-right: 2%;
+                position: relative;
+            }
+
+            .FirstMenu .RightOnes form {
+                text-align: center;
+                width: 100%;
+                margin: 0 auto;
+                float: none;
+            }
+
+            .FirstMenu .RightOnes .SearchBox {
+                width: 60%;
+                float: right;
+                
+                text-align: center;
+                margin-right: 9%;
+                margin-top: 11%;
+                margin-left: -5%;
+                position: absolute;
+
+            }
+
+            .FirstMenu .RightOnes .submit {
+                float: right;
+                margin-top: 11%;
+                margin-left: -14%;
+                position: absolute;
+            }
+
+            .FirstMenu .LeftOnes .idbuy {
+                width: 40%;
+
+                margin: 0 auto;
+                float: right;
+                text-align: center;
+
+            }
+
+            .FirstMenu .LeftOnes .idbuy img {
+                float: right;
+            }
+
+            .FirstMenu .LeftOnes .idbuy {
+                float: right;
+            }
+
+            .FirstMenu .LeftOnes .border {
+                text-align: center;
+                display: none;
+            }
+
+            .FirstMenu .LeftOnes .idbuy .TypeKharid {
+                font-size: 100%;
+                float: right;
+                text-align: center;
+                margin-right: 7%
+            }
+
+            .FirstMenu .LeftOnes .idbuy .circle {
+                size: 50%;
+                float: none;
+                margin-right: 60%;
+                margin-top: 3%;
+            }
+
+            .FirstMenu .LeftOnes .TypeVorood {
+                float: none;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .down {
+                display: none;
+            }
+
+            .UnderMenu {
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                z-index: 2;
+                background-color: #000;
+            }
+
+            .btn {
+                float: right;
+                background-color: #ef5661;
+                border: none;
+                color: white;
+                padding: 12px 16px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .ShowMore {
+            float: right;
+                display: block;
+                float: right;
+                margin: 0 auto;
+                text-align: center;
+
+            }
+
+        }
+    </style>
+    <script>
+        var c = 0;
+        function counter() {
+            c++
+            document.getElementById("adad").innerHTML = c;
+        }
+
+        document.getElementById("first").addEventListener("mouseover", function () {
+            document.getElementById("main").classList.add('main1');
+        });
+        document.getElementById("first").addEventListener("mouseout", function () {
+            document.getElementById("main").classList.remove('main1');
+        });
+    </script>
+</body>
+
+</html>
